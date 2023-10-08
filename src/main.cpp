@@ -26,7 +26,7 @@ unsigned long wificheck_interval = 30000;
 
 void ui_timer()
 {
-  lv_tick_inc(1); /* le the GUI do its work */
+  lv_tick_inc(1); 
 }
 
 // OTA-Things ------------------------------------------------------------------

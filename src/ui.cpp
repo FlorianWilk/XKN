@@ -61,12 +61,12 @@ void my_disp_flush(lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *color
   uint32_t w = (area->x2 - area->x1 + 1);
   uint32_t h = (area->y2 - area->y1 + 1);
 
-  tft.startWrite();                                        // 使能写功能
-  tft.setAddrWindow(area->x1, area->y1, w, h);             // 设置填充区域
-  tft.pushColors((uint16_t *)&color_p->full, w * h, true); // 写入颜色缓存和缓存大小
-  tft.endWrite();                                          // 关闭写功能
+  tft.startWrite();                                       
+  tft.setAddrWindow(area->x1, area->y1, w, h);            
+  tft.pushColors((uint16_t *)&color_p->full, w * h, true);
+  tft.endWrite();                                         
 
-  lv_disp_flush_ready(disp); // 调用区域填充颜色函数
+  lv_disp_flush_ready(disp); 
 }
 
 void lv_display_Init()
@@ -89,20 +89,20 @@ void lv_display_Init()
 
 void lv_display_led_On()
 {
-  pinMode(16, OUTPUT);    // 旧版本
-  digitalWrite(16, HIGH); // 背光默认开始
+  pinMode(16, OUTPUT);    
+  digitalWrite(16, HIGH); 
 
   pinMode(2, OUTPUT);
-  digitalWrite(2, HIGH); // 背光默认开始
+  digitalWrite(2, HIGH); 
 }
 
 void lv_display_led_Off()
 {
-  pinMode(16, OUTPUT);   // 旧版本
-  digitalWrite(16, LOW); // 背光默认开始
+  pinMode(16, OUTPUT);   
+  digitalWrite(16, LOW); 
 
   pinMode(2, OUTPUT);
-  digitalWrite(2, LOW); // 背光默认开始
+  digitalWrite(2, LOW); 
 }
 
 

@@ -13,7 +13,6 @@
 #include <stdlib.h>
 #include <iostream>
 #include <test.h>
-#include "printer.h"
 #include <HTTPClient.h>
 #include <WiFiClient.h>
 #include <WiFi.h>

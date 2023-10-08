@@ -7,7 +7,8 @@
 #include <iostream>
 #include <Arduino.h>
 
-const String klipper_ip = "192.168.1.96"; 
+extern const String klipper_ip;
+
 
 struct printer_values
 {

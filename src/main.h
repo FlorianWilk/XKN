@@ -22,17 +22,13 @@
 #include <WiFiUdp.h>
 #include "printer.h"
 #include "ui.h"
-#include "mywifi.h"
-
-
-
+#include "myconfig.h"
 
 bool isUpdating = false;
 
-
 Ticker timer1;
-String text_print_status = "standby";         // 打印状态
-String text_print_file_name = "No Printfile"; // 打印文件名
+String text_print_status = "standby";        
+String text_print_file_name = "No Printfile"; 
 
 
 uint32_t last_http_request = 0;
